@@ -1,0 +1,210 @@
+:root {
+    --primary-color: #3457D5;
+    --primary-hover: #2a45a8;
+    --secondary-color: #6c757d;
+    --background-color: #f8f9fa;
+    --text-color: #343a40;
+    --light-gray: #e9ecef;
+    --white-color: #fff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.navbar {
+    background-color: var(--white-color);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.nav-link {
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+.lang-toggle-btn {
+    border: 1px solid var(--primary-color);
+    border-radius: 20px;
+    padding: 4px 12px !important;
+    margin-left: 10px;
+    font-weight: 600;
+    color: var(--primary-color) !important;
+}
+
+.lang-toggle-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color) !important;
+}
+
+.hero {
+    background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), url('https://www.transparenttextures.com/patterns/cubes.png');
+    padding: 6rem 0;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.hero h1 {
+    font-weight: 700;
+    background: -webkit-linear-gradient(45deg, var(--primary-color), #8e44ad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero .lead {
+    font-size: 1.25rem;
+    min-height: 50px;
+}
+
+.cursor {
+    display: inline-block;
+    width: 3px;
+    height: 1.2rem;
+    background-color: var(--secondary-color);
+    animation: blink 1s infinite;
+    vertical-align: middle;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.profile-img {
+    width: 175px;
+    height: 175px;
+    object-fit: cover;
+    border: 5px solid var(--primary-color);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.section { padding: 5rem 0; }
+
+.section-title {
+    font-weight: 700;
+    margin-bottom: 3rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.skill-icon, .education-icon, .cert-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    transition: transform 0.3s ease;
+}
+
+#skills .card { text-align: center; }
+
+.card:hover .skill-icon { transform: scale(1.1); }
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover { background-color: var(--primary-hover); }
+
+.btn-outline-primary {
+    padding: 10px 22px;
+    border-radius: 50px;
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    border-width: 2px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.contact-icons a {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    transition: color 0.3s ease, transform 0.3s ease;
+    margin: 0 1rem;
+}
+
+.contact-icons a:hover {
+    color: var(--primary-color);
+    transform: translateY(-5px);
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+footer {
+    background-color: var(--white-color);
+    border-top: 1px solid var(--light-gray);
+    padding: 1.5rem 0;
+}
+
+.back-to-top {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    right: 15px;
+    bottom: 15px;
+    z-index: 996;
+    background: var(--primary-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    transition: all 0.4s;
+}
+
+.back-to-top i { font-size: 24px; color: #fff; }
+
+.back-to-top:hover { background: var(--primary-hover); }
+
+.back-to-top.active {
+    visibility: visible;
+    opacity: 1;
+}
+
