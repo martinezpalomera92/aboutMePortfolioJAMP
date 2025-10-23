@@ -1,9 +1,3 @@
-Here is a complete README.md file for your Jaime Martínez Portfolio project, generated using the content and structure of your provided HTML, CSS, and JavaScript files.
-
-It includes sections for the project overview, features, technologies, setup, and key code practices.
-
-Markdown
-
 # 🧑‍💻 Jaime Martínez | Junior Full-Stack Developer Portfolio
 
 This is the personal portfolio of Jaime Armando Martínez Palomera, showcasing his skills, experience, and projects as a Junior Full-Stack Java Developer. The site features a clean, responsive design, dynamic animations, and full bilingual support (English and Spanish).
@@ -36,8 +30,8 @@ This is a static website and does not require any build process or server-side s
 
 1.  **Clone the repository (if hosted):**
     ```bash
-    git clone [repository-url]
-    cd jaime-martinez-portfolio
+    git clone https://github.com/martinezpalomera92/aboutMePortfolioJAMP/
+    cd aboutMePortfolioJAMP
     ```
 2.  **Open in Browser:**
     Simply open the `index.html` file in your preferred web browser.
