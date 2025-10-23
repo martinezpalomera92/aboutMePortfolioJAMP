@@ -28,7 +28,7 @@ This is the personal portfolio of Jaime Armando Martínez Palomera, showcasing h
 
 This is a static website and does not require any build process or server-side setup.
 
-1.  **Clone the repository (if hosted):**
+1.  **Clone the repository:**
     ```bash
     git clone https://github.com/martinezpalomera92/aboutMePortfolioJAMP/
     cd aboutMePortfolioJAMP
