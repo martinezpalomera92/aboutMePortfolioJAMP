@@ -44,8 +44,10 @@ This is a static website and does not require any build process or server-side s
 
 ### Project Structure
 
-├── index.html # Main structure, content, and data attributes for translation ├── style.css # All custom styling and variables 
-├── main.js # Core JavaScript logic (Language switching, typing, animations) └── img/ # Directory for images (favicon, profile image)
+├── index.html # Main structure, content, and data attributes for translation 
+├── style.css # All custom styling and variables 
+├── main.js # Core JavaScript logic (Language switching, typing, animations) 
+└── img/ # Directory for images (favicon, profile image)
 
 
 ---
