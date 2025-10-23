@@ -1,52 +1,73 @@
+/**
+ * style.css
+ * Global styling for the portfolio website.
+ * Follows modern CSS practices using custom properties for theme management 
+ * and clear naming conventions.
+ */
+
+/* --- 1. Custom Properties (Theme Variables) --- */
 :root {
-    --primary-color: #3457D5;
-    --primary-hover: #2a45a8;
-    --secondary-color: #6c757d;
-    --background-color: #f8f9fa;
-    --text-color: #343a40;
-    --light-gray: #e9ecef;
-    --white-color: #fff;
+    --primary-color: #3457D5;      /* Main brand blue color */
+    --primary-hover: #2a45a8;      /* Slightly darker blue for hover states */
+    --secondary-color: #6c757d;    /* Gray for secondary text/icons */
+    --background-color: #f8f9fa;   /* Light background for body */
+    --text-color: #343a40;         /* Primary dark text color */
+    --light-gray: #e9ecef;         /* Very light gray for borders/dividers */
+    --white-color: #fff;           /* Pure white */
 }
 
+/* --- 2. Base Styling --- */
 html {
+    /* Smooth scrolling for anchor links (e.g., navigation menu) */
     scroll-behavior: smooth;
 }
 
 body {
+    /* Set the default font, background, and text color */
     font-family: 'Poppins', sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
 }
 
+/* --- 3. Navigation Bar (Navbar) Styling --- */
 .navbar {
     background-color: var(--white-color);
+    /* Subtle shadow for depth and separation from content */
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    /* Transition for subtle effect if background color changes */
     transition: background-color 0.3s ease;
 }
 
 .nav-link {
+    /* Smooth transition for hover effects */
     transition: color 0.3s ease;
 }
 
 .nav-link:hover {
+    /* Sets hover color to primary, overriding Bootstrap's default */
     color: var(--primary-color) !important;
 }
 
+/* Language Toggle Button Specific Styling */
 .lang-toggle-btn {
     border: 1px solid var(--primary-color);
     border-radius: 20px;
-    padding: 4px 12px !important;
+    /* Use !important to ensure padding/color overrides Bootstrap's .nav-link styles */
+    padding: 4px 12px !important; 
     margin-left: 10px;
     font-weight: 600;
     color: var(--primary-color) !important;
 }
 
 .lang-toggle-btn:hover {
+    /* Inverted colors on hover */
     background-color: var(--primary-color);
     color: var(--white-color) !important;
 }
 
+/* --- 4. Hero Section Styling --- */
 .hero {
+    /* Light textured background using a transparent pattern for visual interest */
     background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), url('https://www.transparenttextures.com/patterns/cubes.png');
     padding: 6rem 0;
     border-bottom: 1px solid var(--light-gray);
@@ -54,6 +75,7 @@ body {
 
 .hero h1 {
     font-weight: 700;
+    /* Gradient text effect for the main title */
     background: -webkit-linear-gradient(45deg, var(--primary-color), #8e44ad);
     -webkit-background-clip: text;
     background-clip: text;
@@ -62,14 +84,17 @@ body {
 
 .hero .lead {
     font-size: 1.25rem;
-    min-height: 50px;
+    /* Sets a minimum height to prevent layout shift during typing effect */
+    min-height: 50px; 
 }
 
+/* Typing Cursor Styling */
 .cursor {
     display: inline-block;
     width: 3px;
     height: 1.2rem;
     background-color: var(--secondary-color);
+    /* Animation for blinking effect */
     animation: blink 1s infinite;
     vertical-align: middle;
 }
@@ -79,15 +104,22 @@ body {
     50% { opacity: 0; }
 }
 
+/* Profile Image Styling */
 .profile-img {
     width: 175px;
     height: 175px;
+    /* Ensures the image covers the area without distortion */
     object-fit: cover;
     border: 5px solid var(--primary-color);
+    /* Adds a subtle shadow */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-.section { padding: 5rem 0; }
+/* --- 5. Section & Title Styling --- */
+.section { 
+    /* Standard vertical padding for all main content sections */
+    padding: 5rem 0; 
+}
 
 .section-title {
     font-weight: 700;
@@ -96,10 +128,12 @@ body {
     padding-bottom: 0.5rem;
 }
 
+/* Underline decoration for section titles */
 .section-title::after {
     content: '';
     position: absolute;
     bottom: 0;
+    /* Center the pseudo-element horizontally */
     left: 50%;
     transform: translateX(-50%);
     width: 60px;
@@ -108,40 +142,56 @@ body {
     border-radius: 2px;
 }
 
+/* --- 6. Card Components (Skills, Experience, Education) --- */
 .card {
     border: none;
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    /* Smooth lift and shadow transitions on hover */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: left;
 }
 
 .card:hover {
+    /* Lifts the card slightly off the page */
     transform: translateY(-10px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
 }
 
+/* Icons within cards (skills, education, certs) */
 .skill-icon, .education-icon, .cert-icon {
     font-size: 2.5rem;
     color: var(--primary-color);
     transition: transform 0.3s ease;
 }
 
-#skills .card { text-align: center; }
+#skills .card { 
+    /* Overrides the default left-alignment for the skills section */
+    text-align: center; 
+}
 
-.card:hover .skill-icon { transform: scale(1.1); }
+/* Icon scale effect on card hover */
+.card:hover .skill-icon { 
+    transform: scale(1.1); 
+}
 
+/* --- 7. Button Styling --- */
+
+/* Primary Button */
 .btn-primary {
     background-color: var(--primary-color);
     border: none;
     padding: 12px 24px;
-    border-radius: 50px;
+    border-radius: 50px; /* Pill shape */
     font-weight: 600;
     transition: background-color 0.3s ease;
 }
 
-.btn-primary:hover { background-color: var(--primary-hover); }
+.btn-primary:hover { 
+    background-color: var(--primary-hover); 
+}
 
+/* Outline Button */
 .btn-outline-primary {
     padding: 10px 22px;
     border-radius: 50px;
@@ -157,21 +207,25 @@ body {
     color: var(--white-color);
 }
 
+/* --- 8. Contact Section Styling --- */
 .contact-icons a {
     font-size: 2.5rem;
     color: var(--secondary-color);
+    /* Smooth color and hover lift transition */
     transition: color 0.3s ease, transform 0.3s ease;
     margin: 0 1rem;
 }
 
 .contact-icons a:hover {
     color: var(--primary-color);
-    transform: translateY(-5px);
+    transform: translateY(-5px); /* Lift icon on hover */
 }
 
+/* --- 9. Scroll-Fade Animation --- */
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
+    /* Define smooth transition properties for JS to trigger */
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
@@ -180,6 +234,7 @@ body {
     transform: translateY(0);
 }
 
+/* --- 10. Footer and Back to Top --- */
 footer {
     background-color: var(--white-color);
     border-top: 1px solid var(--light-gray);
@@ -188,7 +243,8 @@ footer {
 
 .back-to-top {
     position: fixed;
-    visibility: hidden;
+    /* Initially hidden */
+    visibility: hidden; 
     opacity: 0;
     right: 15px;
     bottom: 15px;
@@ -200,12 +256,17 @@ footer {
     transition: all 0.4s;
 }
 
-.back-to-top i { font-size: 24px; color: #fff; }
+.back-to-top i { 
+    font-size: 24px; 
+    color: #fff; 
+}
 
-.back-to-top:hover { background: var(--primary-hover); }
+.back-to-top:hover { 
+    background: var(--primary-hover); 
+}
 
 .back-to-top.active {
+    /* Class toggled by JavaScript to show the button */
     visibility: visible;
     opacity: 1;
 }
-
